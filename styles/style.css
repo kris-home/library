@@ -1,0 +1,1287 @@
+@font-face {
+    font-family: "Forum";
+    src: url("../fonts/Forum-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-V.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+    /* min-width: 635px; */
+    overflow-x: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+.wrapper{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    background-color: #0C0C0E;
+}
+
+.header-title {
+    width: 294px;
+    padding: 20px;
+    margin: 0;
+    font-family: "Forum";
+    color: #FFF;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+}
+
+.header-nav-container {
+    flex-grow: 1;
+}
+
+.header-burger,
+.open-burger-menu {
+    cursor: pointer;
+    display: none;
+}
+
+.header-menu-list {
+    display: flex;
+
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+.header-menu-item {
+    padding: 20px 30px 20px 0;
+
+}
+
+.header-menu-item:last-child {
+    padding-right: 0;
+
+}
+
+.header-menu-item-a {
+    display: block;
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 20px;
+    line-height: 50px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+.header-menu-item-a:hover {
+    text-decoration: underline;
+}
+
+.header-svg-container {}
+
+.header-icon-profile {
+    cursor: pointer;
+    margin: 31px 20px 31px 40px;
+}
+
+.welcome {
+    background: url(../img/library.jpg) lightgray 50% / cover no-repeat;
+    height: 600px;
+}
+
+.welcome-title-container {
+    padding: 220px 0 160px 0;
+}
+
+.welcome-title {
+    max-width: 520px;
+    height: 150px;
+    margin: 0;
+    padding: 35px 40px;
+    color: #FFF;
+    text-align: center;
+    font-family: Forum;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: #0C0C0E;
+}
+
+.about {
+    width: 100%;
+}
+
+.about-title-container {}
+
+.about-title,
+.favorites-title,
+.coffee-shop-title,
+.contacts-title {
+    margin: 20px 0 0 0;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #0C0C0E;
+    font-family: "Forum";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.about-line,
+.favorites-line,
+.coffee-shop-line,
+.contacts-line,
+.library-cards-line {
+    width: 50px;
+    height: 1px;
+    margin: auto;
+    text-align: center;
+    flex-shrink: 0;
+    background: #0C0C0E;
+}
+
+.about-text {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.carret {
+    cursor: pointer;
+    display: none;
+}
+
+.about-images-items {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 20px;
+    transition: all 1s;
+    overflow: hidden;
+}
+.line{
+    max-width: 1440px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    transition: all 1s;
+}
+.img{
+    min-width: 475px;
+}
+@media (max-width:1440px) {
+    .img{
+        min-width: 33%;
+        padding-right: 5px;
+    }
+    .about-images-items {
+    padding: 0;
+    }
+
+}
+.library-photo {
+    max-width: 100%;
+    margin-left: 5px;
+}
+
+.library-photo:last-child {
+    margin-left: 0;
+}
+.not-visible{
+    display: none;
+}
+.about-slider-line {
+    padding: 30px 0 35px;
+
+}
+
+/* .slider-item {
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+} */
+.slider-list {
+    display: flex;
+    text-align: center;
+    justify-content: center
+}
+
+.dot {
+    display: none;
+}
+
+.slider-lable {
+    position: relative;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+}
+
+.dot+label::before {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    cursor: pointer;
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #0C0C0E;
+    border-radius: 1em;
+}
+
+.dot:checked+label::before {
+    background-color: #BB945F;
+}
+
+.mobi-slider {
+    display: none;
+}
+
+.favorites-text {
+    margin: 40px 20px;
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.seasons-list {
+    display: flex;
+    gap: 82px;
+    margin: 0 20px 0 15px;
+    padding-bottom: 20px;
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ellipse {
+    display: none;
+}
+
+.ellipse+label::before {
+    cursor: pointer;
+    content: '';
+    display: inline-flex;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 1em;
+    margin-right: 20px;
+
+}
+
+.ellipse:checked+label::before {
+    background: url(../img/dot-for-radio.svg) 50% 50% no-repeat;
+
+}
+
+.seasons-item {
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 77px;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.seasons-item:last-child {
+    margin-right: 0px;
+}
+
+.favorites-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 20px 0 20px;
+}
+
+.book {
+    margin: 0 40px 40px 0;
+    border: 1px solid #000;
+    width: 550px;
+    height: 554px;
+    display: flex;
+    flex-direction: column;
+}
+.winter, 
+.spring, 
+.summer,
+.autumn{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+/* .div-absolute{
+    position: relative;
+  top: 0;
+  left: 0;
+} */
+/* .winter{
+    opacity:0;
+    transition: 3s;
+    
+} */
+.book-item {
+    margin: 15px 0 0 20px;
+    text-align: left;
+    color: #0C0C0E;
+    font-family: "Forum";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.book-line {
+    margin: 0 0 0 20px;
+    width: 60px;
+    height: 1px;
+    text-align: left;
+    flex-shrink: 0;
+    background: #BB945F;
+}
+
+.book-title-container {
+    margin: 20px;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+
+}
+
+.book-title {
+    margin: 0;
+}
+
+.book-title-upper {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.book-discription-container {
+    margin: 0 15px 15px 20px;
+    width: 355px;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.book-discription {
+    margin: 0;
+}
+
+.book-buy-container {
+    margin-top: auto
+}
+
+.book-buy {
+    cursor: pointer;
+    margin: 0 0 15px 20px;
+    padding: 5px 0;
+    width: 75px;
+    height: 30px;
+    flex-shrink: 0;
+    background-color: #FFF;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    transition: 1s;
+}
+
+.book-buy-own {
+    margin: 0 0 15px 20px;
+    padding: 5px 0;
+    width: 75px;
+    height: 30px;
+    flex-shrink: 0;
+    background-color: #FFF;
+    color: #BB945F;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border: 1px solid #BB945F;
+
+}
+
+.book-buy:hover {
+    border: 1px solid #BB945F;
+    background: #BB945F;
+
+}
+
+.book-buy:active {
+    box-shadow: 0 0 20px #BB945F;
+    transition: 0.01s;
+}
+
+.book-img-container {
+    margin-right: 20px;
+    width: 200px;
+    height: 300px;
+    position: absolute;
+}
+
+.book-img {
+    position: relative;
+    left: 390px;
+    top: 256px;
+    /* bottom: 100%; */
+    /* bottom: 1px; */
+    /* left: 390px; */
+    /* bottom: 299px; */
+}
+
+.spring,
+.summer,
+.autumn {
+    /* opacity: 0;
+    visibility: hidden; */
+    display: none;
+}
+
+.coffee-shop,
+.contacts,
+.library-cards {
+    margin: 0 20px 40px 20px;
+}
+
+.coffee-shop-container {
+    margin: 20px 0 40px 0;
+}
+
+.coffee-shop-text {
+    margin: 0;
+    text-align: center;
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-title {
+    margin: 0 0 20px 0;
+    color: #BB945F;
+    font-family: "Forum";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.menu-left {}
+
+.menu-right {
+    text-align: end;
+}
+
+.menu-items {
+
+    display: flex;
+    justify-content: right;
+
+}
+
+.menu-text {
+    margin: 20px 0;
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    flex-grow: 1;
+    white-space: nowrap;
+}
+
+.menu-line {
+    width: 100px;
+    height: 1px;
+    margin: auto 60px;
+    text-align: center;
+    flex-shrink: 0;
+    background: #BB945F;
+}
+
+.menu-price {
+    color: #000;
+    font-family: "Forum";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.contacts-item,
+.library-cards-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.contacts-item {
+    text-align: left;
+}
+
+.contacts-info {
+    text-align: left;
+}
+
+.contacts-info-title {
+    margin: 0 0 40px 0;
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.contacts-info-phone {
+    margin: 0 0 20px 0;
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.contacts-info-tel {
+    color: #000;
+
+}
+
+.contacts-info-tel:hover {
+    text-decoration: underline;
+}
+
+.contacts-info-for-all {
+    margin-bottom: 40px;
+}
+
+.contacts-info-title2 {
+    margin: 0 0 20px 0;
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.contacts-info-phone-bold {
+    color: #000;
+    font-weight: 700;
+}
+
+.contacts-info-phone-bold:hover {
+    text-decoration: underline;
+}
+
+.contacts-map {}
+
+.library-cards-title {
+    margin: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #0C0C0E;
+    font-family: "Forum";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.library-cards-container {
+    padding-top: 20px;
+}
+
+.library-cards-find {
+    max-width: 606px;
+
+}
+
+.library-cards-find-title {
+    margin: 0 0 30px 0;
+    text-align: center;
+    color: #000;
+    font-family: "Inter";
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+}
+
+.library-cards-find-form {
+    border: 3px solid #BB945F;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.brooklyn-public-library {
+    margin: 20px;
+    background: #BB945F;
+}
+
+.brooklyn-public-library-title {
+    padding: 20px;
+    margin: 0;
+    color: #000;
+    font-family: "Forum";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+}
+
+.brooklyn-public-library-input {
+    margin: 0 20px 25px 20px;
+    padding: 8px 20px;
+    ;
+    width: 480px;
+    height: 50px;
+    color: #8E8E8E;
+    font-family: "Forum";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.brooklyn-public-library-input::placeholder {
+    color: #8E8E8E;
+    font-family: "Forum";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+}
+
+.brooklyn-public-library-btn {
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: block;
+    padding: 10px 40px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    background-color: white;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.brooklyn-public-library-btn:hover {
+    border: 1px solid #BB945F;
+    background: #BB945F;
+
+}
+
+.brooklyn-public-library-btn:active {
+    box-shadow: 0 0 20px #BB945F;
+    transition: 0.01s;
+}
+
+.library-cards-get {
+    text-align: end;
+}
+
+.library-cards-get-title {
+    margin: 0 0 40px 0;
+    color: #000;
+    font-family: "Forum";
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+}
+
+.library-cards-get-text {
+    max-width: 456px;
+    margin-bottom: 35px;
+    color: #000;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.4px;
+
+}
+
+.library-cards-get-btn {
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: #FFF;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    width: 75px;
+    height: 30px;
+    color: #0C0C0E;
+    font-family: "Inter";
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.library-cards-get-btn:hover {
+    border: 1px solid #BB945F;
+    background: #BB945F;
+
+}
+
+.library-cards-get-btn:active {
+    box-shadow: 0 0 20px #BB945F;
+    transition: 0.01s;
+}
+
+.footer {
+    background: #0C0C0E;
+}
+
+.footer-info {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.footer-info:last-child {
+    padding-bottom: 0;
+}
+
+.footer-adress>p {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+}
+
+.footer-adress>p>a {
+    color: #FFF;
+}
+
+.footer-adress>a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer-working-hours>p {
+    margin: 0;
+    padding: 0;
+    text-align: end;
+}
+
+.footer-social-media {
+    margin-top: 8px;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 22px 20px;
+}
+
+.footer-line {
+    margin: 0 20px;
+    background: #FFF;
+    height: 1px;
+}
+
+.footer-end {
+    display: flex;
+    justify-content: space-between;
+    padding: 42px 20px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+.rs-school,
+.years {
+    color: #FFF;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.rs-school:hover {
+    text-decoration: underline;
+}
+
+.username {
+    color: #FFF;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.username:hover {
+    text-decoration: underline;
+}
+.modal-shadow-active{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.6;
+}
+.modal-login,
+.modal-register{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* overflow: hidden;
+    overflow-y: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+}
+.modal-opened {
+     position: fixed;
+   right: 0;
+    left: 0;
+    /* position: sticky; */
+
+    /* position: sticky; */
+  margin: 0 auto;
+  /* overflow:hidden; - не нужно использовать
+  height: 100vh;
+  width: 100%; */
+}
+.modal-no-active{
+    visibility:hidden;
+}
+.modal-active{
+    visibility:visible; 
+}
+.modal-profil{
+    position: relative;
+     right: -7px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 115px;
+}
+.modal-profil-close{
+    top: -210px;
+    /* transition: 1s; */
+}
+.modal-profil-open{
+    top: -4px;
+    /* transition: 1s; */
+}
+.forma-register {
+    width: 250px;
+height: 382px;
+background-color: white;
+}
+.forma-login{
+    width: 250px;
+    height: 262px;
+    background-color: white;
+}
+.forma-header{
+    display: flex;
+    justify-content: space-between;
+}
+.forma-name{
+   margin: 20px 37px 20px 85px; 
+   text-align: center;
+font-family: "Forum";
+font-size: 20px;
+line-height: 20px;
+letter-spacing: 0.4px;
+text-transform: uppercase;
+}
+.forma-name-login{
+    margin: 20px 37px 20px 97px; 
+   text-align: center;
+font-family: "Forum";
+font-size: 20px;
+line-height: 20px;
+letter-spacing: 0.4px;
+text-transform: uppercase;
+}
+.forma-name-profile{
+margin: 5px 16px;
+    color: #000;
+font-family: "Inter";
+font-size: 15px;
+font-weight: 700;
+line-height: 20px;
+}
+.profil-line{
+    margin: 0 auto;
+border-top: 1px solid #BB945F;
+    width: 40px;
+}
+.forma-close{
+    height: 15px;
+    width: 15px;
+    margin: 14px;
+    cursor: pointer;
+}
+.forma-body{
+    margin: 0 26px 22px 26px;
+    display: flex;
+    flex-direction: column;
+}
+.forma-profile{
+  text-align: center; 
+  margin: 15px 0 20px 0;
+}
+.first-lable-profile{
+    padding-bottom: 10px;
+}
+.forma-body-profile{
+    margin: 0 0 10px 0;
+    font-family: "Inter";
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.3px; 
+    cursor: pointer;
+}
+.forma-body-lable{
+    margin-bottom: 10px;
+    font-family: "Inter";
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+}
+.form-input{
+    padding: 0;
+    width: 100%;
+    height: 18px;
+    flex-shrink: 0;
+    border: 1px solid #BB945F;
+    margin-bottom: 10px;
+}
+.form-input:last-child{
+    margin-bottom: 0;
+}
+.modal-register-btn,
+.modal-login-btn {
+    margin: 0 0 10px 25px;
+    width: 75px;
+height: 30px;
+border-radius: 2px;
+border: 1px solid #0C0C0E;
+background-color: white;
+text-align: center;
+font-family: "Inter";
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 1px;
+cursor: pointer;
+
+}
+.forma-footer{
+    display: flex;
+    cursor: pointer;
+}
+.forma-footer-text{
+    margin: 0 0 20px 25px;
+text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+font-family: "Inter";
+font-size: 10px;
+}
+.forma-footer-link{
+    margin: 0;
+    padding-left: 10px;
+    color: #0C0C0E;
+text-align: center;
+font-family: "Inter";
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 1px;
+text-decoration-line: underline;
+}
+@media (max-width:1024px) {
+    html{
+        overflow-x:hidden;
+    }
+    .header-burger-container {
+        display: flex;
+
+    }
+
+    .header-title {
+        flex-grow: 1;
+        font-size: 30px;
+    }
+
+    .header-nav-container {
+        display: none;
+    }
+
+    .header-burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+    .burger-close {
+        text-align: center;
+        width: 45px;
+height: 32px;
+    }
+
+    .burger {
+        text-align: center;
+        width: 45px;
+height: 20px;
+    }
+.nav-burger-menu{
+    padding-top: 10px;
+}
+    .about-text-container {
+        margin: 0 20px;
+    }
+.about-images{
+    display: flex; 
+    justify-content: center;
+}
+    .about-images-items {
+        position: relative;
+        align-items: center;
+        padding: 0;
+        max-width: 450px;
+    }
+    .line{
+        display: flex;
+        transition: all 1s;
+    }
+    .library-photo {
+        width: 100%;
+    }
+    .img{
+        min-width: 450px;
+        padding-right: 0;
+    }
+
+    .brooklyn-public-library-btn{
+margin-top: 18px;
+    }
+    .carret {
+        display: block;
+        align-items: center;
+        padding-top: 40px;
+        margin: 0 58px;
+    }
+.carret-blur{
+    cursor: auto;
+    opacity: 0.3;
+}
+    .about-slider-line {
+        padding-top: 17px;
+    }
+
+    .mobi-slider {
+        display: block;
+    }
+
+    .favorites-items {
+        display: absolute;
+        /* display: flex;
+        flex-wrap: wrap; */
+        justify-content: center;
+        margin: 20px 20px 0 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-left {
+        max-width: 440px;
+    }
+
+    .menu-right {
+        margin-top: 20px;
+    }
+
+    .contacts-item,
+    .library-cards-item {
+        flex-direction: column;
+    }
+
+    .contacts-map {
+        margin: 80px auto 0 auto;
+        max-width: 696px;
+    }
+
+    .contacts-map-img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+.brooklyn-public-library{
+    margin-bottom: 18px;
+}
+    .library-cards-find {
+        margin: 0 auto;
+    }
+
+    .library-cards-get {
+        margin-top: 22px;
+        text-align: center;
+    }
+
+    .library-cards-get-text {
+        margin: 0 auto 40px;
+        max-width: 600px;
+    }
+    .library-cards {
+        margin: 0 5px 40px 5px;
+    }
+    .library-cards-get-btn{
+        margin: 0 10px;
+    }
+    .footer-end{
+gap:100px;
+    }
+    .close-burger-menu-click{
+        position: absolute;
+        right: -332px;
+        top:90px;
+         transition: 1s;
+         /* transform: translateX(332px); */
+    }
+    .open-burger-menu-click{
+        display: block;
+        position: absolute;
+        top:90px;
+         right: 0;
+         transition: 1s;
+         /* transform: none; */
+    }
+    
+    .open-burger-menu{
+        width: 332px;
+    height: 480px;
+    background: #0C0C0E;
+    display: flex;
+    flex-direction: column;
+    }
+    
+.header-burger-menu-list{
+    list-style-type:none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    gap:30px;
+    margin: 0 auto;
+}
+.header-burger-menu-item{
+    text-align: center;
+}
+.header-svg-open-burger-menu{
+    display: flex;
+    justify-content: end;
+    height: 90px;
+}
+.header-icon-open-burger-menu{
+    cursor: pointer;
+    margin: 31px 20px 35px 20px;
+}
+.close{
+    cursor: pointer;
+    height: 32px;
+    margin: 31px 25px 35px 25px;
+}
+}
